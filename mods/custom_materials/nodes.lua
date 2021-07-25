@@ -1,7 +1,7 @@
-minetest.register_node("custom_materials:stone_emerald",{
+minetest.register_node("custom_materials:stone_meteorite",{
 
-    description = "emerald ore",
-    tiles = {"default_stone.png^emerald.png"},
+    description = "meteorite ore",
+    tiles = {"default_stone.png^meteorite.png"},
     groups = {cracky = 1},
 
 })
@@ -23,6 +23,19 @@ minetest.override_item("default:pine_wood",{
     tiles = {{name = "pine_wood_grid.png", align_style = "world", scale = 2}},
     iventory_image = '{inventorycube{pine_wood_grid.png&[sheet:2x2:1,1{pine_wood_grid.png&[sheet:2x2:1,1{pine_wood_grid.png&[sheet:2x2:1,1',
 })
+
+minetest.override_item("default:junglewood",{
+
+    tiles = {{name = "jungle_wood_grid.png", align_style = "world", scale = 2}},
+    iventory_image = '{inventorycube{jungle_wood_grid.png&[sheet:2x2:1,1{jungle_wood_grid.png&[sheet:2x2:1,1{jungle_wood_grid.png&[sheet:2x2:1,1',
+})
+
+minetest.override_item("default:acacia_wood",{
+
+    tiles = {{name = "acacia_wood_grid.png", align_style = "world", scale = 2}},
+    iventory_image = '{inventorycube{acacia_wood_grid.png&[sheet:2x2:1,1{acacia_wood_grid.png&[sheet:2x2:1,1{acacia_wood_grid.png&[sheet:2x2:1,1',
+})
+
 
 
 
