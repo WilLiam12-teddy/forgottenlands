@@ -3,6 +3,7 @@ minetest.register_node("custom_materials:stone_meteorite",{
     description = "meteorite ore",
     tiles = {"default_stone.png^meteorite.png"},
     groups = {cracky = 1},
+    drop = "custom_materials:meteorite_fragment"
 
 })
 
