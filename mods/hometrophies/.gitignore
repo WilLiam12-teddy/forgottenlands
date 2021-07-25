@@ -1,0 +1,6 @@
+#Lunovox Files
+.git
+*.old
+*~
+*.backup
+*.patch
