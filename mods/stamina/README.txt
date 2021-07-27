@@ -19,9 +19,6 @@ Eating food no longer heals the player. Instead, it increases the
 stamina of the player. The stamina bar shows how well fed the player
 is. More bread pieces means more stamina.
 
-Walking while holding down Aux1 (usually E key) will make player sprint so
-long as their stamina bar is 3 or more bread.  This will make the player run
-that bit faster and jump a tiny bit higher.
 
 Q&A time: Why won't I move the stamina bar to the right?
 
@@ -43,19 +40,6 @@ are called after this mod, so the itemstack will have changed already
 when callbacks are called. You can get the original itemstack as 6th
 parameter of your function then.
 
-A global function is available for mods to change player stamina levels:
-
-   stamina.change(player, change)
-
-
-TenPlus1 Additions:
--------------------
-
- - Added support for POVA and player_monoids
- - Added Pipeworks checks for fake players
- - Added 60 second drunk effect when foods have {alcohol=1} group (eat 4 or more)
- - Moved exhaustion and hud_id to player table instead of player attributes
-
 
 License:
 --------
@@ -68,5 +52,3 @@ Textures:
 Sounds:
 - stamina_eat.*.ogg - http://www.freesound.org/people/sonictechtonic/sounds/242215/ CC-BY-3.0
 
-stamina_burp.ogg - https://www.freesfx.co.uk/sfx/burp (small burp)
-stamina_sip.ogg - https://elements.envato.com/sip-16081-C7V5YLG
