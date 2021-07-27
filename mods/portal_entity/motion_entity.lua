@@ -454,6 +454,7 @@ local fling_entity = function(ent, addvel)
 	local vel
 	local isp = current:is_player()
 	vel = isp and current:get_player_velocity() or current:get_velocity()
+	local tvel = vector.add(vel, addvel)
 	if isp then
 		return fling_player(current, tvel)
 	else
