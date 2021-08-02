@@ -1,6 +1,6 @@
 ## Afazeres FL
  
- 
+
 1 - Jarra do tesouro da má sorte - spawnar mob automáticamente quando quebrado.
 2 - Customizar inventário - deixa-lo mais elegante e confortável tanto para quem usa mobile quanto pc.
 3 - Mudar textura da água e talvez alguns outros itens.
