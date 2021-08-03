@@ -17,7 +17,7 @@ minetest.register_craftitem("fl_materials:gold_coin", {
 })
 
 minetest.register_tool("fl_materials:meteorite_pick",{
-    description = "Meteorite pickaxe",
+    description = "Meteorite Pickaxe",
     inventory_image = "tool_meteoritepick.png",
     range = 10,
     tool_capabilities = {
@@ -31,7 +31,7 @@ minetest.register_tool("fl_materials:meteorite_pick",{
 })
 
 minetest.register_tool("fl_materials:meteorite_axe",{
-    description = "Meteorite pickaxe",
+    description = "Meteorite Axe",
     inventory_image = "tool_meteoriteaxe.png",
     range = 10,
     tool_capabilities = {
