@@ -29,6 +29,20 @@ minetest.register_decoration({
         })
 
 minetest.register_decoration({
+         name = "fl_ruins:ruins3",
+         deco_type = "schematic",
+         place_on = {"default:dirt_with_grass","default:dirt_with_snow","default:dirt_with_rainforest_litter","default:dirt_with_coniferous_litter"},
+         place_offset_y = 0,
+         sidelen = 16,
+         fill_ratio = 0.0001,
+         y_max = 50,
+         y_min = 1.0,
+         schematic = minetest.get_modpath("fl_ruins").."/schematics/ruins3.mts",
+         flags = "force_placement",
+         rotation = "random",
+       })
+
+minetest.register_decoration({
          name = "fl_ruins:ship",
          deco_type = "schematic",
          place_on = "default:sand",
@@ -46,7 +60,7 @@ minetest.register_decoration({
           name = "fl_ruins:mine",
           deco_type = "schematic",
           place_on = {"default:dirt_with_grass","default:dirt_with_snow","default:dirt_with_rainforest_litter","default:dirt_with_coniferous_litter"},
-          place_offset_y = -13,
+          place_offset_y = -12,
           sidelen = 16,
           fill_ratio = 0.0001,
           y_max = 20,

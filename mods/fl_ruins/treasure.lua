@@ -9,10 +9,10 @@ minetest.register_node("fl_ruins:jar",{
     drop = {max_itens = 2,
            items = {
                    {rarity = 4, 
-                    items = {"default:gold_ingot"}
+                    items = {"fl_materials:silver_coin"}
                    },
                    {rarity = 2, 
-                   items = {"default:steel_ingot"}
+                   items = {"fl_materials:copper_coin"}
                    }
                  }
     },
@@ -41,10 +41,10 @@ minetest.register_node("fl_ruins:jar2",{
     drop = {max_itens = 2,
            items = {
                    {rarity = 4, 
-                    items = {"default:gold_ingot"}
+                    items = {"fl_materials:gold_coin"}
                    },
                    {rarity = 2, 
-                   items = {"default:steel_ingot"}
+                   items = {"fl_materials:silver_coin"}
                    }
                  }
     },

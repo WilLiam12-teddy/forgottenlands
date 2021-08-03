@@ -2,3 +2,4 @@ default
 xdecor
 mobs
 mobs_mc
+fl_materials
