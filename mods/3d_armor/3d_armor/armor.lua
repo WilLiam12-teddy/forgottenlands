@@ -337,6 +337,41 @@ if armor.materials.crystal then
 	})
 end
 
+if armor.materials.meteorite then
+	armor:register_armor("3d_armor:helmet_meteorite", {
+		description = S("Meteorite Helmet"),
+		inventory_image = "3d_armor_inv_helmet_meteorite.png",
+		groups = {armor_head=1, armor_heal=6, armor_use=200,
+			physics_speed=-0.01, physics_gravity=-0.1},
+		armor_groups = {fleshy=15},
+		damage_groups = {cracky=3, snappy=2, choppy=1, crumbly=1, level=2},
+	})
+	armor:register_armor("3d_armor:chestplate_meteorite", {
+		description = S("Meteorite Chestplate"),
+		inventory_image = "3d_armor_inv_chestplate_meteorite.png",
+		groups = {armor_torso=1, armor_heal=6, armor_use=200,
+			physics_speed=-0.04, physics_jump = 0.4, physics_gravity=0.02},
+		armor_groups = {fleshy=15},
+		damage_groups = {cracky=3, snappy=2, choppy=2, crumbly=1, level=2},
+	})
+	armor:register_armor("3d_armor:leggings_meteorite", {
+		description = S("Meteorite Leggings"),
+		inventory_image = "3d_armor_inv_leggings_meteorite.png",
+		groups = {armor_legs=1, armor_heal=6, armor_use=200,
+			physics_speed=-0.03, physics_jump = 0.4, physics_gravity=0.04},
+		armor_groups = {fleshy=15},
+		damage_groups = {cracky=3, snappy=2, choppy=2, crumbly=1, level=2},
+	})
+	armor:register_armor("3d_armor:boots_meteorite", {
+		description = S("Meteorite Boots"),
+		inventory_image = "3d_armor_inv_boots_meteorite.png",
+		groups = {armor_feet=1, armor_heal=6, armor_use=200,
+			physics_speed=-0.01, physics_jump = 0.2, physics_gravity=0.01},
+		armor_groups = {fleshy=10},
+		damage_groups = {cracky=3, snappy=2, choppy=1, crumbly=1, level=2},
+	})
+end
+
 for k, v in pairs(armor.materials) do
 	minetest.register_craft({
 		output = "3d_armor:helmet_"..k,
