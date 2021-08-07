@@ -67,7 +67,7 @@ minetest.register_tool("fl_materials:bone_pick",{
 })
 
 minetest.register_tool("fl_materials:meteorite_axe",{
-    description = "Meteorite pickaxe",
+    description = "Meteorite Axe",
     inventory_image = "tool_meteoriteaxe.png",
     range = 10,
     tool_capabilities = {
