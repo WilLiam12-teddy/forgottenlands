@@ -37,6 +37,8 @@ minetest.override_item("default:acacia_wood",{
     iventory_image = '{inventorycube{acacia_wood_grid.png&[sheet:2x2:1,1{acacia_wood_grid.png&[sheet:2x2:1,1{acacia_wood_grid.png&[sheet:2x2:1,1',
 })
 
+--- new nodes
+
 minetest.register_node("fl_materials:stone_meteorite",{
 
     description = "meteorite ore",
@@ -45,6 +47,24 @@ minetest.register_node("fl_materials:stone_meteorite",{
     drop = "fl_materials:meteorite_fragment",
     sounds = default.node_sound_stone_defaults()
 
+})
+
+minetest.register_node("fl_materials:stone_fossil",{
+
+    description = "Fossil ore",
+    tiles = {"default_stone.png^fossil_ore.png"},
+    groups = {cracky = 3, level = 1},
+    drop = {max_itens = 2,
+    items = {
+            {rarity = 2, 
+             items = {"fl_materials:fossil"}
+            },
+            {rarity = 1, 
+            items = {"mobs_mc:bone"}
+            }
+          }
+        },
+    sounds = default.node_sound_stone_defaults()
 })
 
 minetest.register_node("fl_materials:copper_brute",{
@@ -80,6 +100,16 @@ minetest.register_node("fl_materials:gold_brute",{
     sounds = default.node_sound_stone_defaults()
 })
 
+minetest.register_node("fl_materials:nostalgic_wood",{
+
+    description = "Nostalgic wood",
+    tiles = {"nostalgic_wood.png"},
+    groups = {choppy = 1},
+    sounds = default.node_sound_wood_defaults()
+    })
+
+--- brutes recipe
+
 local recipes = {"default:copper_lump","default:iron_lump","default:gold_lump","moreores:silver_lump"}
 local material = {"fl_materials:copper_brute","fl_materials:iron_brute","fl_materials:gold_brute","fl_materials:silver_brute"}
 local ingots = {"default:copper_ingot","default:steel_ingot","default:gold_ingot","moreores:silver_ingot"}
@@ -101,6 +131,20 @@ for recipes, v in pairs(recipes) do
     })
     i = i + 1
 end
+
+--- custom nodes recipes
+
+local f = "fl_materials:fossil"
+local w = "group:wood"
+
+minetest.register_craft({
+    output = "fl_materials:nostalgic_wood",
+    recipe = {
+        {w,w,w},
+        {w,f,w},
+        {w,w,w}
+    }
+})
 
 
 

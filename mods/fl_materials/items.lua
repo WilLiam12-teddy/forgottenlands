@@ -1,5 +1,6 @@
 
-local tool_stats = {maxlevel=2, uses=10, times={[1]=1.50, [2]=1.20, [3]=0.80}}
+local tool_statsm = {maxlevel=2, uses=150, times={[1]=1.10, [2]=1.00, [3]=0.80}}
+local tool_statsb = {maxlevel=1, uses=100, times={[3]=0.5}}
 
 --- Itens
 
@@ -30,6 +31,12 @@ minetest.register_craftitem("fl_materials:meteorite_ingot",{
     inventory_image = "meteorite_ingot.png"
 })
 
+minetest.register_craftitem("fl_materials:fossil",{
+
+    description = "Fossil",
+    inventory_image = "fossil.png"
+})
+
 --- Tools
 
 minetest.register_tool("fl_materials:meteorite_pick",{
@@ -40,7 +47,20 @@ minetest.register_tool("fl_materials:meteorite_pick",{
         full_punch_interval=1.5,
         max_drop_level=1,
         groupcaps={
-            cracky = tool_stats
+            cracky = tool_statsm
+        },
+        damage_groups = {fleshy=1}
+    }
+})
+
+minetest.register_tool("fl_materials:bone_pick",{
+    description = "Bone pickaxe",
+    inventory_image = "tool_bonepick.png",
+    tool_capabilities = {
+        full_punch_interval=1,
+        max_drop_level=1,
+        groupcaps={
+            cracky = tool_statsb
         },
         damage_groups = {fleshy=1}
     }
@@ -54,15 +74,57 @@ minetest.register_tool("fl_materials:meteorite_axe",{
         full_punch_interval=1.5,
         max_drop_level=1,
         groupcaps={
-            choppy = tool_stats
+            choppy = tool_statsm
         },
         damage_groups = {fleshy=1}
     }
 })
 
+minetest.register_tool("fl_materials:bone_axe",{
+    description = "Bone pickaxe",
+    inventory_image = "tool_boneaxe.png",
+    tool_capabilities = {
+        full_punch_interval=1.5,
+        max_drop_level=1,
+        groupcaps={
+            choppy = tool_statsb
+        },
+        damage_groups = {fleshy=1}
+    }
+})
+
+minetest.register_tool("fl_materials:bone_sword",{
+    description = "Bone sword",
+    inventory_image = "tool_bonesword.png",
+    tool_capabilities = {
+        full_punch_interval=0.2,
+        max_drop_level=1,
+        groupcaps={
+            snappy = tool_statsb
+        },
+        damage_groups = {fleshy=2}
+    }
+})
+
+minetest.register_tool("fl_materials:meteorite_sword",{
+    description = "Meteorite sword",
+    inventory_image = "tool_meteoritesword.png",
+    range = 5,
+    tool_capabilities = {
+        full_punch_interval=1.5,
+        max_drop_level=1,
+        groupcaps={
+            snappy = tool_statsm
+        },
+        damage_groups = {fleshy=5}
+    }
+})
+
+
 ---Recipes
 
 local v = "fl_materials:meteorite_ingot"
+local b = "mobs_mc:bone"
 local i = "default:stick"
 
 minetest.register_craft({
@@ -83,6 +145,15 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+    output = "fl_materials:bone_pick",
+    recipe = {
+              {b,b,b},
+              {"",i,""},
+              {"",i,""}
+    }
+})
+
+minetest.register_craft({
     output = "fl_materials:meteorite_axe",
     recipe = {
               {v,v,""},
@@ -90,3 +161,31 @@ minetest.register_craft({
               {"",i,""}
     }
 })
+
+minetest.register_craft({
+    output = "fl_materials:bone_axe",
+    recipe = {
+              {b,b,""},
+              {b,i,""},
+              {"",i,""}
+    }
+})
+
+minetest.register_craft({
+    output = "fl_materials:meteorite_sword",
+    recipe = {
+              {"",v,""},
+              {"",v,""},
+              {"",i,""}
+    }
+})
+
+minetest.register_craft({
+    output = "fl_materials:bone_sword",
+    recipe = {
+              {"",b,""},
+              {"",b,""},
+              {"",i,""}
+    }
+})
+
