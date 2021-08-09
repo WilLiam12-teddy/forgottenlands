@@ -39,9 +39,12 @@ minetest.register_craftitem("fl_materials:fossil",{
 
 --- Tools
 
+local tool_scale = {x=1.5,y=1.5,z=1.5}
+
 minetest.register_tool("fl_materials:meteorite_pick",{
     description = "Meteorite pickaxe",
     inventory_image = "tool_meteoritepick.png",
+    wield_scale = tool_scale,
     range = 10,
     tool_capabilities = {
         full_punch_interval=1.5,
@@ -56,6 +59,7 @@ minetest.register_tool("fl_materials:meteorite_pick",{
 minetest.register_tool("fl_materials:bone_pick",{
     description = "Bone pickaxe",
     inventory_image = "tool_bonepick.png",
+    wield_scale = tool_scale,
     tool_capabilities = {
         full_punch_interval=1,
         max_drop_level=1,
@@ -67,8 +71,9 @@ minetest.register_tool("fl_materials:bone_pick",{
 })
 
 minetest.register_tool("fl_materials:meteorite_axe",{
-    description = "Meteorite Axe",
+    description = "Meteorite axe",
     inventory_image = "tool_meteoriteaxe.png",
+    wield_scale = tool_scale,
     range = 10,
     tool_capabilities = {
         full_punch_interval=1.5,
@@ -83,6 +88,7 @@ minetest.register_tool("fl_materials:meteorite_axe",{
 minetest.register_tool("fl_materials:bone_axe",{
     description = "Bone pickaxe",
     inventory_image = "tool_boneaxe.png",
+    wield_scale = tool_scale,
     tool_capabilities = {
         full_punch_interval=1.5,
         max_drop_level=1,
@@ -96,6 +102,7 @@ minetest.register_tool("fl_materials:bone_axe",{
 minetest.register_tool("fl_materials:bone_sword",{
     description = "Bone sword",
     inventory_image = "tool_bonesword.png",
+    wield_scale = tool_scale,
     tool_capabilities = {
         full_punch_interval=0.2,
         max_drop_level=1,
@@ -109,6 +116,7 @@ minetest.register_tool("fl_materials:bone_sword",{
 minetest.register_tool("fl_materials:meteorite_sword",{
     description = "Meteorite sword",
     inventory_image = "tool_meteoritesword.png",
+    wield_scale = tool_scale,
     range = 5,
     tool_capabilities = {
         full_punch_interval=1.5,
