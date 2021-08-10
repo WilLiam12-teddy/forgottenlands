@@ -1,12 +1,5 @@
 
 
-minetest.clear_craft({type = "cooking", recipe ="default:iron_lump"})
-minetest.clear_craft({type = "cooking", recipe ="default:copper_lump"})
-minetest.clear_craft({type = "cooking", recipe ="default:gold_lump"})
-minetest.clear_craft({type = "cooking", recipe ="moreores:silver_lump"})
-
-
-
 minetest.override_item("default:wood",{
 
     tiles = {{name = "wood_grid.png", align_style = "world", scale = 2}},
@@ -138,7 +131,7 @@ local f = "fl_materials:fossil"
 local w = "group:wood"
 
 minetest.register_craft({
-    output = "fl_materials:nostalgic_wood",
+    output = "fl_materials:nostalgic_wood 8",
     recipe = {
         {w,w,w},
         {w,f,w},

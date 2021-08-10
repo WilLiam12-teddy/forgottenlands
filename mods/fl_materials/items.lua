@@ -37,6 +37,42 @@ minetest.register_craftitem("fl_materials:fossil",{
     inventory_image = "fossil.png"
 })
 
+minetest.register_craftitem("fl_materials:copper_dust",{
+
+    description = "Copper dust",
+    inventory_image = "dust_copper.png"
+})
+
+minetest.register_craftitem("fl_materials:iron_dust",{
+
+    description = "Iron dust",
+    inventory_image = "dust_iron.png"
+})
+
+minetest.register_craftitem("fl_materials:gold_dust",{
+
+    description = "Gold dust",
+    inventory_image = "dust_gold.png"
+})
+
+minetest.register_craftitem("fl_materials:tin_dust",{
+
+    description = "Tin dust",
+    inventory_image = "dust_tin.png"
+})
+
+minetest.register_craftitem("fl_materials:silver_dust",{
+
+    description = "Silver dust",
+    inventory_image = "dust_silver.png"
+})
+
+minetest.register_craftitem("fl_materials:mithril_dust",{
+
+    description = "Mithril dust",
+    inventory_image = "dust_mithril.png"
+})
+
 --- Tools
 
 local tool_scale = {x=1.5,y=1.5,z=1.5}
@@ -129,71 +165,5 @@ minetest.register_tool("fl_materials:meteorite_sword",{
 })
 
 
----Recipes
 
-local v = "fl_materials:meteorite_ingot"
-local b = "mobs_mc:bone"
-local i = "default:stick"
-
-minetest.register_craft({
-
-    type = "shapeless",
-    output = "fl_materials:meteorite_ingot",
-    recipe = {"default:gold_ingot","default:gold_ingot","default:gold_ingot","default:gold_ingot",
-    "fl_materials:meteorite_fragment","fl_materials:meteorite_fragment","fl_materials:meteorite_fragment","fl_materials:meteorite_fragment"}
-    })
-
-minetest.register_craft({
-    output = "fl_materials:meteorite_pick",
-    recipe = {
-              {v,v,v},
-              {"",i,""},
-              {"",i,""}
-    }
-})
-
-minetest.register_craft({
-    output = "fl_materials:bone_pick",
-    recipe = {
-              {b,b,b},
-              {"",i,""},
-              {"",i,""}
-    }
-})
-
-minetest.register_craft({
-    output = "fl_materials:meteorite_axe",
-    recipe = {
-              {v,v,""},
-              {v,i,""},
-              {"",i,""}
-    }
-})
-
-minetest.register_craft({
-    output = "fl_materials:bone_axe",
-    recipe = {
-              {b,b,""},
-              {b,i,""},
-              {"",i,""}
-    }
-})
-
-minetest.register_craft({
-    output = "fl_materials:meteorite_sword",
-    recipe = {
-              {"",v,""},
-              {"",v,""},
-              {"",i,""}
-    }
-})
-
-minetest.register_craft({
-    output = "fl_materials:bone_sword",
-    recipe = {
-              {"",b,""},
-              {"",b,""},
-              {"",i,""}
-    }
-})
 
