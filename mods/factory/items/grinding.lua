@@ -47,6 +47,43 @@ factory.register_recipe("grinding",{
   output = "default:sand",
   time = 2,
 })
+
+factory.register_recipe("grinding",{
+  input = {"default:copper_lump"},
+  output = "fl_materials:copper_dust",
+  time = 4,
+})
+
+factory.register_recipe("grinding",{
+  input = {"default:iron_lump"},
+  output = "fl_materials:iron_dust",
+  time = 4,
+})
+
+factory.register_recipe("grinding",{
+  input = {"default:gold_lump"},
+  output = "fl_materials:gold_dust",
+  time = 4,
+})
+
+factory.register_recipe("grinding",{
+  input = {"default:tin_lump"},
+  output = "fl_materials:tin_dust",
+  time = 4,
+})
+
+factory.register_recipe("grinding",{
+  input = {"moreores:silver_lump"},
+  output = "fl_materials:silver_dust",
+  time = 4,
+})
+
+factory.register_recipe("grinding",{
+  input = {"moreores:mithril_lump"},
+  output = "fl_materials:mithril_dust",
+  time = 4,
+})
+
 egrinder.register_fallthrough("group:sand")
 
 --are registered as single registrations, but there are no differences in the wood output
