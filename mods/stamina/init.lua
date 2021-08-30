@@ -358,6 +358,30 @@ if minetest.setting_getbool("enable_damage") and minetest.is_yes(minetest.settin
 			offset = {x = -266, y = -110},
 			max = 0,
 		})
+		player:hud_add({
+			name = "staminabg",
+			hud_elem_type = "statbar",
+			position = {x = 0.5, y = 1},
+			size = {x = 24, y = 24},
+			text = "stamina_hud_bg.png",
+			number = 20,
+			alignment = {x = -1, y = -1},
+			offset = {x = -266, y = -110},
+			max = 0,
+			z_index = -1,
+		})
+		player:hud_add({
+			name = "heartbg",
+			hud_elem_type = "statbar",
+			position = {x = 0.5, y = 1},
+			size = {x = 24, y = 24},
+			text = "heart_bg.png",
+			number = 20,
+			alignment = {x = -1, y = -1},
+			offset = {x = -266, y = -88},
+			max = 0,
+			z_index = -1,
+		})
 		player:set_attribute("stamina:hud_id", id)
 		-- reset poisoned
 		player:set_attribute("stamina:poisoned", "no")
